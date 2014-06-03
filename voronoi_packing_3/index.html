@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<meta name="description" content="6.850: Voronoi Packing">
+<meta name="author" content="Curtis Northcutt">
+<title>6.850: Voronoi Packing</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Load style sheets -->
+<link rel="stylesheet" type="text/css" href="packing.css" />
+<link rel="stylesheet" href="css/foundation.css">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script type="text/javascript" src="jquery/jquery-1.9.0.min.js"></script>
+<script src="js/vendor/custom.modernizr.js"></script>
+
+<!-- Load main javascript here -->
+<script type="text/javascript" src="packing.js"></script>
+<script type="text/javascript" src="circle.js"></script>
+<script type="text/javascript" src="voronoi.js"></script>
+
+</head>
+
+<body>
+  <div id = 'title'>
+    6.850: Grid everything! Even Voronoi Fingerprints
+  </div>
+  <div id = 'title2'>
+    Voronoi for a known non-gamer.
+  </div>
+  <div id = 'page-content'>
+    <div id = 'left-panel'>
+      <p>This application estimates Voronoi similarity to y = x using grid approximation.<p>
+      <hr>
+      <input id = "run" type="button" value="Run algorithm!"/>
+      <hr>
+      <h5>Count when i=j</h5>
+      <aside id="diag-count">0</aside>
+      <h5>Count when i/=j</h5>
+      <aside id="non-diag-count">0</aside>
+    </div>
+    <div id = 'right-panel'>
+      <canvas id="circle-canvas" height = "600" width = "600"></canvas>
+      <iframe id="iframe" src="http://cgn.scripts.mit.edu/voronoi3/" width="600" height="600"></iframe>
+      <canvas id="grid-canvas" height = "600" width = "600"></canvas>
+      <canvas id="overlay-canvas" height = "600" width = "600"></canvas>
+    </div>
+  </div>
+  
+
+  <div class="reveal-modal-bg" style="display: none"></div>
+
+<script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+</script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.reveal.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
+</body>
+
+</html>
